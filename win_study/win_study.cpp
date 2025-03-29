@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "win_study.h"
+#include "vector"
 
 #define MAX_LOADSTRING 100
 
@@ -121,9 +122,12 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
 //
 //
-POINT objPos{ 500,500 };       //중앙점 값
-POINT objScale{ 100,100 };      // 스케일 값
-// 시작점 : 중앙점 - scale/2 //
+struct tObjInfo {
+    POINT objPos;
+    POINT objScale;
+};
+
+vector = tObjInfo
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
